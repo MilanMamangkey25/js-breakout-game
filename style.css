@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    background-color: rgb(174, 184, 178);
+}
+
+canvas { 
+    background: #eee; 
+    display: block; 
+    margin: 0 auto;
+    border: 2px solid goldenrod;
+    width: 100%;
+}
+
+h1 {
+    font-size: 42px;
+    color: #f0e118;
+}
