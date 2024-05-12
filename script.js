@@ -85,7 +85,7 @@ function drawStartBtn(){
     ctx.fillStyle = "#f0e118";
     ctx.font = "28px sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText("Start", canvas.width/2, canvas.height/2 + (75/2) + 10);
+    ctx.fillText("Mulai", canvas.width/2, canvas.height/2 + (75/2) + 10);
 }
 
 // draw Restart button
@@ -98,7 +98,7 @@ function drawRestartBtn(){
     ctx.fillStyle = "#f0e118";
     ctx.font = "28px sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText("Restart", canvas.width/2, canvas.height/2 + (75/2) + 10);
+    ctx.fillText("Mulai Kembali", canvas.width/2, canvas.height/2 + (75/2) + 10);
 }
 
 // draw ball
@@ -258,7 +258,7 @@ function counter(num) {
     ctx.font="40px Comic Sans MS";
     ctx.fillStyle = "red";
     ctx.textAlign = "center";
-    ctx.fillText("Continuing in: "+num, canvas.width/2, canvas.height/2+80);
+    ctx.fillText("Lanjut dalam: "+num, canvas.width/2, canvas.height/2+80);
     if(num == 0){
         clearInterval(intvl);
         paused = false;
@@ -273,8 +273,8 @@ function showLostLive(){
     ctx.font = "24px Georgia";
     ctx.fillStyle = "grey";
     ctx.textAlign = "center";
-    ctx.fillText("Oh no! You just lost a life!", canvas.width/2, canvas.height/2-40);
-    ctx.fillText("Total Remaining: " + lives, canvas.width/2, canvas.height/2);
+    ctx.fillText("Tidak! Kamu baru saja kehilangan nyawa!", canvas.width/2, canvas.height/2-40);
+    ctx.fillText("Sisa: " + lives, canvas.width/2, canvas.height/2);
 }
 
 // show Game Over text
@@ -285,7 +285,7 @@ function showGameOver(){
     ctx.fillStyle = "grey";
     ctx.textAlign = "center";
     ctx.fillText("GAME OVER", canvas.width/2, canvas.height/2-60);
-    ctx.fillText("Total Score: " + score, canvas.width/2, canvas.height/2-20);
+    ctx.fillText("Skor Total: " + score, canvas.width/2, canvas.height/2-20);
     drawRestartBtn();
     
 }
@@ -297,8 +297,8 @@ function showWinning(){
     ctx.font = "28px Georgia";
     ctx.fillStyle = "grey";
     ctx.textAlign = "center";
-    ctx.fillText("CONGRATULATIONS, ALL BRICKS CLEARED", canvas.width/2, canvas.height/2-60);
-    ctx.fillText("Total Score: " + score, canvas.width/2, canvas.height/2-20);
+    ctx.fillText("SELAMAT, semua balok sudah hancur!", canvas.width/2, canvas.height/2-60);
+    ctx.fillText("Skor Total: " + score, canvas.width/2, canvas.height/2-20);
     drawRestartBtn();
     playWinGame();
 }
@@ -309,7 +309,7 @@ function drawPause(){
     ctx.font = "50px Georgia";
     ctx.fillStyle = "red";
     ctx.textAlign = "center";
-    ctx.fillText("Game Paused", canvas.width/2, canvas.height/2);
+    ctx.fillText("Game di pause", canvas.width/2, canvas.height/2);
 }
 
 // function to pause/continue game
@@ -583,7 +583,7 @@ function drawScore() {
     ctx.font = "26px Arial";
     ctx.fillStyle = textColor;
     ctx.textAlign = "start";
-    ctx.fillText("Score: " + score, 8, 30);
+    ctx.fillText("Skor: " + score, 8, 30);
 }
 
 function drawLives() {
@@ -591,7 +591,7 @@ function drawLives() {
     ctx.font = "26px Arial";
     ctx.fillStyle = textColor;
     ctx.textAlign = "start";
-    ctx.fillText("Lives: " + lives, 8, 60);
+    ctx.fillText("Nyawa: " + lives, 8, 60);
 }
 
 function drawVolume(){
@@ -612,7 +612,7 @@ document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("mousemove", mouseMoveHandler, false);
 document.addEventListener("click", mouseClickHandler, false);
 
-// pause game on tab change
+// pause game dengan tab
 document.addEventListener("visibilitychange", function() {
     if (document.hidden && pressedStart){
         paused = true;
